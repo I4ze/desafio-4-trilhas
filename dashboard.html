@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoSUS - Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_dashboard.css">
+</head>
+
+<body>
+  <header>
+    <img src="assets/logo_infosus.svg" alt="InfoSUS" class="infoSus_header" />
+    <a href="index.html" class="btn">VOLTAR PARA SITE</a>
+  </header>
+
+  <main class="main">
+    <section class="region_selector">
+      <h1>Dados Gerais - SUS</h1>
+      <div class="filters">
+        <div class="select-group">
+          <label for="regiao">Região</label>
+          <select id="regiao">
+            <option selected disabled>Selecione o Estado</option>
+          </select>
+        </div>
+        <div class="select-group">
+          <label for="faixa_etaria">Faixa Etária</label>
+          <select id="faixa_etaria">
+            <option selected disabled>Selecione a faixa etária</option>
+          </select>
+        </div>
+      </div>
+    </section>
+   <section class="card_section">
+     <div class="card">
+      <img src="assets/hospital_icon.svg" alt="InfoSUS" />
+      <p>Internações em 2025</p>
+      <h2>1.250.000</h2>
+    </div>
+    <div class="card">
+      <img src="assets/vaccine_icon.svg" alt="InfoSUS" />
+      <p>Cobertura Vacinal</p>
+      <h2>74,2%</h2>
+    </div>
+    <div class="card">
+      <img src="assets/bed_icon.svg" alt="InfoSUS" />
+      <p>Leitos Disponíveis SUS</p>
+      <h2>98.352</h2>
+    </div>
+    <div class="card">
+      <img src="assets/headphone_icon.svg" alt="InfoSUS" />
+      <p>Atendimentos Acumulados</p>
+      <h2>52.980</h2>
+    </div>
+   </section>
+
+    <section class="charts">
+      <div class="chart">
+        <h3>Internações no SUS por Ano</h3>
+        <canvas id="chartLinha"></canvas>
+      </div>
+      <div class="chart">
+        <h3>Principais causas de internação</h3>
+        <canvas id="chartPizza"></canvas>
+      </div>
+      <div class="chart">
+        <h3>Internações por UF</h3>
+        <div id="mapaBrasil"></div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <div class="chart">
+        <h3>Cobertura por especialidade médica</h3>
+        <canvas id="chartBarras"></canvas>
+      </div>
+      <div class="table">
+        <h3>Leitos por Região</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Região</th>
+              <th>Leitos SUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sudeste</td>
+              <td>32.000</td>
+            </tr>
+            <tr>
+              <td>Nordeste</td>
+              <td>22.500</td>
+            </tr>
+            <tr>
+              <td>Sul</td>
+              <td>18.400</td>
+            </tr>
+            <tr>
+              <td>Norte</td>
+              <td>12.100</td>
+            </tr>
+            <tr>
+              <td>Centro-Oeste</td>
+              <td>13.200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight">
+        <h3>Destaques Regionais</h3>
+        <ul>
+          <li>O Sul tem a maior taxa de leitos por habitante.</li>
+          <li>O Norte tem a menor cobertura pediátrica do país.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="buttons">
+      <button class="btn">⬇️ Baixar Dados (CSV)</button>
+      <button class="btn">📄 Exportar Visualização (PDF)</button>
+    </div>
+  </main>
+
+  <!-- Scripts futuros: Chart.js, Mapa, etc -->
+</body>
+
+</html>
