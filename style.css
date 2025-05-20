@@ -23,6 +23,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
 }
 
 nav a {
@@ -215,7 +217,7 @@ nav a {
 }
 
 .card {
-    background: #f9fcff;
+    background: #26323e;
     border: 1px solid #d6e9f7;
     border-radius: 12px;
     width: 250px;
@@ -553,17 +555,20 @@ nav a {
 
 /* ---------- FOOTER ---------- */
 footer {
-    background: #fff;
-    padding: 36px 40px;
-    border-top: 1px solid #c0dbe4;
-    font-size: 16px;
-    font-weight: 600;
-    color: #003366;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.05);
-    /* nova sombra */
+  background: #fff;
+  padding: 36px 40px;
+  border-top: 1px solid #c0dbe4;
+  font-size: 16px;
+  font-weight: 600;
+  color: #003366;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.05);
+
+  /* ✅ Arredondamento dos cantos superiores */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 footer nav a {
