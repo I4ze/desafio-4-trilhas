@@ -36,7 +36,7 @@ nav a {
 }
 
 .btn {
-    background: #004080;
+    background: #1E63AE;
     color: #fff;
     padding: 14px 28px;
     border-radius: 100px;
@@ -217,8 +217,8 @@ nav a {
 }
 
 .card {
-    background: #26323e;
-    border: 1px solid #d6e9f7;
+    background: #fff;
+    border: 1px solid #26323e;
     border-radius: 12px;
     width: 250px;
     padding: 20px;
