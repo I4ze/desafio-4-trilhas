@@ -33,43 +33,59 @@
         </div>
       </div>
     </section>
-   <section class="card_section">
-     <div class="card">
-      <img src="assets/hospital_icon.svg" alt="InfoSUS" />
-      <p>Internações em 2025</p>
-      <h2>1.250.000</h2>
-    </div>
-    <div class="card">
-      <img src="assets/vaccine_icon.svg" alt="InfoSUS" />
-      <p>Cobertura Vacinal</p>
-      <h2>74,2%</h2>
-    </div>
-    <div class="card">
-      <img src="assets/bed_icon.svg" alt="InfoSUS" />
-      <p>Leitos Disponíveis SUS</p>
-      <h2>98.352</h2>
-    </div>
-    <div class="card">
-      <img src="assets/headphone_icon.svg" alt="InfoSUS" />
-      <p>Atendimentos Acumulados</p>
-      <h2>52.980</h2>
-    </div>
-   </section>
-
-    <section class="charts">
-      <div class="chart">
-        <h3>Internações no SUS por Ano</h3>
-        <canvas id="chartLinha"></canvas>
+    <section class="card_section">
+      <div class="card">
+        <img src="assets/hospital_icon.svg" alt="InfoSUS" />
+        <p>Internações em 2025</p>
+        <h2>1.250.000</h2>
       </div>
-      <div class="chart">
-        <h3>Principais causas de internação</h3>
-        <canvas id="chartPizza"></canvas>
+      <div class="card">
+        <img src="assets/vaccine_icon.svg" alt="InfoSUS" />
+        <p>Cobertura Vacinal</p>
+        <h2>74,2%</h2>
       </div>
-      <div class="chart">
-        <h3>Internações por UF</h3>
-        <div id="mapaBrasil"></div>
+      <div class="card">
+        <img src="assets/bed_icon.svg" alt="InfoSUS" />
+        <p>Leitos Disponíveis SUS</p>
+        <h2>98.352</h2>
+      </div>
+      <div class="card">
+        <img src="assets/headphone_icon.svg" alt="InfoSUS" />
+        <p>Atendimentos Acumulados</p>
+        <h2>52.980</h2>
       </div>
     </section>
+
+
+    <section class="Internações-por-ano">
+      <div class="chart-obs-group">
+        <div class="chart">
+          <h3>Internações no SUS por Ano</h3>
+          <canvas id="chart-lines" width="400" height="200"></canvas>
+        </div>
+        <div class="mini-info">
+          <img src="assets/Vector.svg" alt="info" />
+          <span>A cobertura vacinal caiu 3,1% em relação a 2022</span>
+        </div>
+      </div>
+      <div class="obs">
+        <h3>Observações</h3>
+        <p class="obs-text">2020–2021 mostra queda devido à pandemia (suspensão de procedimentos eletivos)</p>
+        <p class="obs-text">2022–2024 mostra retomada gradual</p>
+        <p class="obs-text">Esses números refletem internações hospitalares totais, somando todas as causas</p>
+        <h4>Dados simulados com base em tendências reais do SIH/DATASUS</h4>
+      </div>
+    </section>
+
+    <div class="chart">
+      <h3>Principais causas de internação</h3>
+      <canvas id="chartPizza"></canvas>
+    </div>
+    <div class="chart">
+      <h3>Internações por UF</h3>
+      <div id="mapaBrasil"></div>
+    </div>
+
 
     <section class="table-section">
       <div class="chart">
@@ -124,7 +140,13 @@
     </div>
   </main>
 
-  <!-- Scripts futuros: Chart.js, Mapa, etc -->
+  <!-- Scripts: Chart.js, Mapa, etc -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="graficoConfig.js"></script>
+  <script>
+    const ctx = document.getElementById('chart-lines').getContext('2d');
+    const meuGrafico = new Chart(ctx, chart_linha);
+  </script>
 </body>
 
 </html>

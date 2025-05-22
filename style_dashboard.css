@@ -4,10 +4,12 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: #f0f8fc;
     color: #1a3b5d;
 }
+
 header,
 footer {
     background: #fff;
@@ -22,7 +24,7 @@ h1 {
     font-size: 50px;
 }
 
-.region_selector{
+.region_selector {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,41 +38,51 @@ h1 {
     align-content: end;
     border-radius: 50px;
 }
+
 select {
     padding: 10px;
     border-radius: 100px;
     border: 1px solid #ccc;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
+
 .select-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
+
 .card {
     background: white;
     padding: 20px;
     border-radius: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     flex: 1;
     text-align: center;
 }
-.charts, .table-section {
+
+.charts,
+.table-section {
     margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
-.chart, .table, .highlight {
+
+.chart,
+.table,
+.highlight {
     background: white;
     padding: 20px;
     border-radius: 16px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 .buttons {
     display: flex;
     gap: 10px;
 }
+
 .btn {
     background-color: #005d99;
     color: white;
@@ -80,17 +92,62 @@ select {
     cursor: pointer;
     text-decoration: none;
 }
+
 .btn:hover {
     background-color: #004477;
 }
 
-.main{
+.main {
     padding: 60px;
 }
 
-.card_section{
+.card_section {
     display: flex;
     justify-content: space-between;
     gap: 5%;
     padding-bottom: 2%;
+}
+
+.Internações-por-ano {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* Alinha topo */
+}
+
+.Internações-por-ano .chart {
+    flex: 3;
+}
+
+.Internações-por-ano .obs {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.obs-text {
+    margin-bottom: 75px; /* espaçamento entre parágrafos */
+}
+
+.chart-obs-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 3; /* mesmo peso do gráfico antigo */
+}
+
+
+.mini-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: #1a3b5d;
 }
